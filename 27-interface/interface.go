@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // interface adalah sebuah kontrak yang harus dipenuhi oleh struct yang mengimplementasikannya
 type HasName interface {
 	GetName() string // ini adalah method signature, tidak memiliki implementasi
@@ -7,7 +9,7 @@ type HasName interface {
 
 // SayHello adalah function yang menerima parameter value yang bertipe HasName, sehingga value harus mengimplementasikan interface HasName
 func SayHello(value HasName) {
-	println("Hello", value.GetName())
+	fmt.Println("Hello", value.GetName())
 }
 
 // Person struct memiliki field Name
