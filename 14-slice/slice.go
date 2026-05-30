@@ -7,16 +7,16 @@ import (
 func main() {
 	names := []string{"Abdul", "Budi", "Cici", "Dedi", "Eka", "Gina"}
 
-	slices1 := names[4:6] // Mengambil elemen dari index 0 hingga 1 (tidak termasuk index 2)
+	slices1 := names[4:6] // Ambil dari indeks 4 sampai SEBELUM indeks 6 (berarti indeks 4 dan 5). [Eka Gina]
 	fmt.Println("Slicing 1:", slices1)
 
-	slices2 := names[2:6] // Mengambil elemen dari index 1 hingga 2 (tidak termasuk index 3)
+	slices2 := names[2:6] // Ambil dari indeks 2 sampai SEBELUM indeks 6 (berarti indeks 2, 3, 4, dan 5). [Cici Dedi Eka Gina]
 	fmt.Println("Slicing 2:", slices2)
 
-	slices3 := names[:2] // Mengambil elemen dari index 0 hingga 1 (tidak termasuk index 2)
+	slices3 := names[:2] // Ambil dari indeks 0 sampai SEBELUM indeks 2 (berarti indeks 0 dan 1) ["Abdul", "Budi"]
 	fmt.Println("Slicing 3:", slices3)
 
-	slices4 := names[1:] // Mengambil elemen dari index 1 hingga akhir
+	slices4 := names[1:] // Ambil dari indeks 1 sampai habis. ["Budi", "Cici", "Dedi", "Eka", "Gina"]
 	fmt.Println("Slicing 4:", slices4)
 
 	slices5 := names[:] // Mengambil semua elemen
